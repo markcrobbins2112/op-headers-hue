@@ -6,7 +6,7 @@ module.exports = class HeadersHuePlugin extends Plugin {
     this.observer = null;
     this.activeAnimations = new Set();
   }
-
+  
   async onload() {
     console.log('%c[Headers Hue]%c Initializing Custom Header Theme Engine...', 'color: #70a1ff; font-weight: bold;', 'color: default;');
 
@@ -44,7 +44,8 @@ module.exports = class HeadersHuePlugin extends Plugin {
           
           const isFoldTrigger = target.matches('.cm-fold-indicator, .cm-gutterElement, .markdown-heading-collapse-button');
           if (isFoldTrigger) {
-            const lineParent = target.closest('.cm-line, .markdown-rendered, h1, h2, h3, h4, h5, h6');
+            // Expanded search matrix to capture any surrounding header lines or preview nodes seamlessly
+            const lineParent = target.closest('.cm-line, .HyperMD-header, .markdown-rendered, h1, h2, h3, h4, h5, h6');
             if (lineParent) this.triggerFoldAnimationLoop(lineParent);
           }
         }
@@ -93,6 +94,7 @@ module.exports = class HeadersHuePlugin extends Plugin {
       const classList = element.className;
       const match = classList.match(/cm-header-([1-6])/);
       if (match) {
+        // FIXED: Extract matching capture group string item element from index [1] cleanly
         level = parseInt(match[1]);
       }
     }
@@ -106,9 +108,14 @@ module.exports = class HeadersHuePlugin extends Plugin {
   }
 
   triggerFoldAnimationLoop(containerElement) {
-    const targets = containerElement.matches('[data-hue-level]') ? 
-      [containerElement] : 
-      containerElement.querySelectorAll('[data-hue-level]');
+    // FIX: Fallback targets mapping logic list captures parent rows alongside deep inner child heading nodes
+    const targets = [];
+    if (containerElement.hasAttribute('data-hue-level') || containerElement.matches('[class*="cm-header-"], .cm-header')) {
+      targets.push(containerElement);
+    }
+    
+    const children = containerElement.querySelectorAll('[data-hue-level], [class*="cm-header-"], .cm-header');
+    children.forEach(el => targets.push(el));
 
     targets.forEach((el) => {
       if (this.activeAnimations.has(el)) return;
@@ -162,7 +169,6 @@ module.exports = class HeadersHuePlugin extends Plugin {
       const colors = levelsMap[lvl];
       
       cssRules += `
-        /* FIX: Added display layout modifications and explicit 60% min-width parameters */
         [data-hue-level="${lvl}"]:not(.cm-formatting-header),
         .cm-s-obsidian .cm-header-${lvl}:not(.cm-formatting-header) {
           display: inline-block !important;
@@ -235,10 +241,11 @@ module.exports = class HeadersHuePlugin extends Plugin {
         transform: translateX(-1000%) !important;        
       }
 
+      /* FIXED: Added !important inside keyframes timeline variables to cleanly override base themes */
       @keyframes headersHueShiftRotate {
-        0%   { filter: hue-rotate(0deg); }
-        50%  { filter: hue-rotate(180deg); }
-        100% { filter: hue-rotate(360deg); }
+        0%   { filter: hue-rotate(0deg) !important; }
+        50%  { filter: hue-rotate(180deg) !important; }
+        100% { filter: hue-rotate(360deg) !important; }
       }
     `;
 
