@@ -1,6 +1,6 @@
 {
     "id": "obsidian-headers-hue",
-    "name": "Headers Hue",
+    "name": "!Headers Hue",
     "version": "1.0.0",
     "minAppVersion": "1.0.0",
     "description": "Colors markdown headers from H1-H6, adds directional gradient borders, handles hover lightening, and plays custom hue shifts during fold state updates.",

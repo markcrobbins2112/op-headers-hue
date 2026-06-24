@@ -39,11 +39,9 @@ module.exports = class HeadersHuePlugin extends Plugin {
   initializeFoldObserver() {
     this.observer = new MutationObserver((mutations) => {
       mutations.forEach((mutation) => {
-        // Look for class modifications inside CodeMirror editor containers
         if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
           const target = mutation.target;
           
-          // Detect Obsidian fold state transitions inside Live Preview or flat Edit views
           const isFoldTrigger = target.matches('.cm-fold-indicator, .cm-gutterElement, .markdown-heading-collapse-button');
           if (isFoldTrigger) {
             const lineParent = target.closest('.cm-line, .markdown-rendered, h1, h2, h3, h4, h5, h6');
@@ -61,7 +59,6 @@ module.exports = class HeadersHuePlugin extends Plugin {
   }
 
   sweepActiveViewport() {
-    // Sync all headings across Edit frames, Source views, and standard preview contexts
     const activeHeaders = document.querySelectorAll(
       '.cm-header, h1, h2, h3, h4, h5, h6, .markdown-preview-view h1, .markdown-preview-view h2, .markdown-preview-view h3, .markdown-preview-view h4, .markdown-preview-view h5, .markdown-preview-view h6'
     );
@@ -76,7 +73,6 @@ module.exports = class HeadersHuePlugin extends Plugin {
     headings.forEach((heading) => {
       this.assignHeaderIdentifierTraits(heading);
       
-      // Hook a specific layout click handler onto preview collapse buttons to trigger fold shifts
       const collapseBtn = heading.querySelector('.markdown-heading-collapse-button');
       if (collapseBtn && !collapseBtn.dataset.hueBound) {
         collapseBtn.dataset.hueBound = "true";
@@ -87,16 +83,13 @@ module.exports = class HeadersHuePlugin extends Plugin {
     });
   }
 
-  // Identifies heading depth levels based on CSS classes or node names, stamping standard attributes
   assignHeaderIdentifierTraits(element) {
     let level = 0;
 
-    // Evaluate standard HTML heading structures
     const tagName = element.tagName;
     if (tagName && /^H[1-6]$/.test(tagName)) {
       level = parseInt(tagName.charAt(1));
     } else {
-      // Evaluate CodeMirror inner style string tokens layout matrices
       const classList = element.className;
       const match = classList.match(/cm-header-([1-6])/);
       if (match) {
@@ -112,7 +105,6 @@ module.exports = class HeadersHuePlugin extends Plugin {
     }
   }
 
-  // Fires a pure CSS transition sequence by cycling class toggles cleanly without blocking the caret thread
   triggerFoldAnimationLoop(containerElement) {
     const targets = containerElement.matches('[data-hue-level]') ? 
       [containerElement] : 
@@ -124,7 +116,6 @@ module.exports = class HeadersHuePlugin extends Plugin {
       this.activeAnimations.add(el);
       el.classList.add('headers-hue-folding');
 
-      // Remove the tracking animation trait once the keyframe timeline resolves (1 second duration)
       window.setTimeout(() => {
         el.classList.remove('headers-hue-folding');
         this.activeAnimations.delete(el);
@@ -138,8 +129,6 @@ module.exports = class HeadersHuePlugin extends Plugin {
     const styleEl = document.createElement('style');
     styleEl.id = 'obsidian-headers-hue-styles';
 
-    // 1. Map core resting hex codes alongside their lighter hovered counterparts
-    // Level 1: Red | Level 2: Purple | Level 3: Blue | Level 4: Green | Level 5: Yellow | Level 6: Orange
     const levelsMap = {
       "1": { rest: "hsl(0, 75%, 45%)",   hover: "hsl(0, 85%, 65%)" },
       "2": { rest: "hsl(280, 70%, 45%)", hover: "hsl(280, 85%, 65%)" },
@@ -150,38 +139,49 @@ module.exports = class HeadersHuePlugin extends Plugin {
     };
 
     let cssRules = `
-      /* Universal configuration layout rules across standard headings styles */
       .headers-hue-processed,
       .cm-s-obsidian .cm-header {
         transition: color 0.3s ease, border-image 0.3s ease !important;
+        text-decoration: none !important;
+        text-decoration-line: none !important;
+      }
+
+      /* Explicitly target and reset header hashtags/markup tokens everywhere */
+      .cm-s-obsidian .cm-formatting-header,
+      .cm-s-obsidian [class*="cm-formatting-header"] {
+        color: var(--text-muted, #a6a6a6) !important;
+        text-decoration: none !important;
+        text-decoration-line: none !important;
+        border-bottom: none !important;
+        background-image: none !important;
+        display: inline-block;
       }
     `;
 
-    // Loop variables out to output explicit H1-H6 rules sets across standard preview containers and CodeMirror code fields
     Object.keys(levelsMap).forEach((lvl) => {
       const colors = levelsMap[lvl];
       
       cssRules += `
-        /* Resting state rules layout */
-        [data-hue-level="${lvl}"],
-        .cm-s-obsidian .cm-header-${lvl} {
+        /* FIX: Added display layout modifications and explicit 60% min-width parameters */
+        [data-hue-level="${lvl}"]:not(.cm-formatting-header),
+        .cm-s-obsidian .cm-header-${lvl}:not(.cm-formatting-header) {
+          display: inline-block !important;
+          min-width: 60% !important;
           color: ${colors.rest} !important;
           border-bottom: 2px solid transparent !important;
           border-image: linear-gradient(to right, ${colors.rest}, transparent) 1 !important;
+          text-decoration: none !important;
         }
 
-        /* Hovered state triggers. Lightens up hex codes cleanly */
-        [data-hue-level="${lvl}"]:hover,
-        .cm-s-obsidian .cm-header-${lvl}:hover {
+        [data-hue-level="${lvl}"]:not(.cm-formatting-header):hover,
+        .cm-s-obsidian .cm-header-${lvl}:not(.cm-formatting-header):hover {
           color: ${colors.hover} !important;
           border-image: linear-gradient(to right, ${colors.hover}, transparent) 1 !important;
         }
       `;
     });
 
-    // 2. Append the hardware-accelerated continuous infinite scroll timeline variables for fold indicators
     cssRules += `
-      /* Triggers direct hue shift rotations via CSS layout animation properties during collapse updates */
       .headers-hue-folding {
         animation: headersHueShiftRotate 1s ease-in-out !important;
       }
