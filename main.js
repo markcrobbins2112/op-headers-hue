@@ -130,12 +130,12 @@ module.exports = class HeadersHuePlugin extends Plugin {
     styleEl.id = 'obsidian-headers-hue-styles';
 
     const levelsMap = {
-      "1": { rest: "hsl(0, 75%, 45%)",   hover: "hsl(0, 85%, 65%)" },
-      "2": { rest: "hsl(280, 70%, 45%)", hover: "hsl(280, 85%, 65%)" },
-      "3": { rest: "hsl(210, 75%, 45%)", hover: "hsl(210, 85%, 65%)" },
-      "4": { rest: "hsl(120, 65%, 40%)", hover: "hsl(120, 80%, 60%)" },
-      "5": { rest: "hsl(50, 80%, 40%)",  hover: "hsl(50, 95%, 55%)" },
-      "6": { rest: "hsl(25, 80%, 45%)",  hover: "hsl(25, 95%, 60%)" }
+      "1": { rest: "hsl(0, 75%, 35%)",   hover: "hsl(0, 85%, 50%)" },
+      "2": { rest: "hsl(280, 70%, 30%)", hover: "hsl(280, 85%, 50%)" },
+      "3": { rest: "hsl(210, 70%, 30%)", hover: "hsl(210, 85%, 50%)" },
+      "4": { rest: "hsl(120, 65%, 30%)", hover: "hsl(120, 80%, 50%)" },
+      "5": { rest: "hsl(50, 80%, 30%)",  hover: "hsl(50, 95%, 50%)" },
+      "6": { rest: "hsl(25, 80%, 30%)",  hover: "hsl(25, 95%, 50%)" }
     };
 
     let cssRules = `
@@ -184,6 +184,55 @@ module.exports = class HeadersHuePlugin extends Plugin {
     cssRules += `
       .headers-hue-folding {
         animation: headersHueShiftRotate 1s ease-in-out !important;
+      }
+      .cm-content .HyperMD-header .cm-formatting-header-1{
+        position: absolute;
+        left: -2.1rem;
+        font-size: 0.8em !important;
+      }
+      .cm-content .HyperMD-header .cm-formatting-header-2{
+        position: absolute;
+        font-size: 0.8em !important;
+        left: -2.8rem;
+      }
+      .cm-content .HyperMD-header .cm-formatting-header-3{
+        position: absolute;
+        font-size: 0.8em !important;
+        left: -3.6rem;
+      }
+      .cm-content .HyperMD-header .cm-formatting-header-4{
+        position: absolute;
+        font-size: 0.8em !important;
+        left: -3.6rem;
+      }
+      .cm-content .HyperMD-header .cm-formatting-header-5{
+        position: absolute;
+        font-size: 0.8em !important;
+        left: -4.0rem;
+      }
+      .cm-content .HyperMD-header .cm-formatting-header-6{
+        position: absolute;
+        font-size: 0.8em !important;
+        left: -4.4rem;
+      }
+      .cm-sizer{
+        padding-left: 2.5em;
+      }
+
+      .cm-blockid {
+        position: absolute !important;
+        top: 0;
+        right: 0;
+        /* Initial State: No transformation offset metrics applied */
+        transform: translateX(0%) !important;
+        transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1) !important;
+      }      
+      .cm-blockid{
+        color: #555555 !important;
+      }
+      .cm-line:hover .cm-blockid{
+        color: #999999 !important;
+        transform: translateX(-1000%) !important;        
       }
 
       @keyframes headersHueShiftRotate {
