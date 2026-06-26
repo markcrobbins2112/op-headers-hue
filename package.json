@@ -1,0 +1,20 @@
+{
+  "name": "op-headers-hue",
+  "displayName": "Headers Hue",
+  "version": "1.0.0",
+  "description": "Colors markdown headers from H1-H6, adds directional gradient borders, handles hover lightening, and plays custom hue shifts during fold state updates.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/markcrobbins2112/op-headers-hue.git"
+  },
+  "author": "markcrobbins",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/markcrobbins2112/op-headers-hue/issues"
+  },
+  "homepage": "https://github.com/markcrobbins2112/op-headers-hue#readme"
+}
