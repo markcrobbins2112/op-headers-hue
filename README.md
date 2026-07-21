@@ -1,7 +1,12 @@
+---
+title: README
+---
+
 <!-- # TEMPLATE: README.template.md -->
 
 
 <!-- markdownlint-disable MD013 -->
+
 # README
 
 Colors markdown headers from H1-H6, adds directional gradient borders, handles hover lightening, and plays custom hue shifts during fold state updates.

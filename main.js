@@ -138,14 +138,18 @@ module.exports = class HeadersHuePlugin extends Plugin {
 
     const levelsMap = {
       "1": { rest: "hsl(0, 75%, 35%)",   hover: "hsl(0, 85%, 50%)" },
-      "2": { rest: "hsl(280, 70%, 30%)", hover: "hsl(280, 85%, 50%)" },
-      "3": { rest: "hsl(210, 70%, 30%)", hover: "hsl(210, 85%, 50%)" },
+      "2": { rest: "hsl(280, 70%, 40%)", hover: "hsl(280, 85%, 60%)" },
+      "3": { rest: "hsl(210, 70%, 40%)", hover: "hsl(210, 85%, 60%)" },
       "4": { rest: "hsl(120, 65%, 30%)", hover: "hsl(120, 80%, 50%)" },
       "5": { rest: "hsl(50, 80%, 30%)",  hover: "hsl(50, 95%, 50%)" },
       "6": { rest: "hsl(25, 80%, 30%)",  hover: "hsl(25, 95%, 50%)" }
     };
 
     let cssRules = `
+      /* Normal body text color */
+      body {
+        color:  #777799 !important;
+      }        
       .headers-hue-processed,
       .cm-s-obsidian .cm-header {
         transition: color 0.3s ease, border-image 0.3s ease !important;
@@ -179,6 +183,7 @@ module.exports = class HeadersHuePlugin extends Plugin {
           text-decoration: none !important;
         }
 
+        .cm-active .cm-header-${lvl}:not(.cm-formatting-header),
         [data-hue-level="${lvl}"]:not(.cm-formatting-header):hover,
         .cm-s-obsidian .cm-header-${lvl}:not(.cm-formatting-header):hover {
           color: ${colors.hover} !important;
@@ -188,6 +193,14 @@ module.exports = class HeadersHuePlugin extends Plugin {
     });
 
     cssRules += `
+      .cm-content .HyperMD-header .cm-formatting-header-1,
+      .cm-content .HyperMD-header .cm-formatting-header-2,
+      .cm-content .HyperMD-header .cm-formatting-header-3,
+      .cm-content .HyperMD-header .cm-formatting-header-4,
+      .cm-content .HyperMD-header .cm-formatting-header-5,
+      .cm-content .HyperMD-header .cm-formatting-header-6 {
+        color: #444444!important;
+      }
       .headers-hue-folding {
         animation: headersHueShiftRotate 1s ease-in-out !important;
       }
@@ -225,23 +238,102 @@ module.exports = class HeadersHuePlugin extends Plugin {
         padding-left: 2.5em;
       }
 
-      .cm-blockid {
-        position: absolute !important;
-        top: 0;
-        right: 0;
-        /* Initial State: No transformation offset metrics applied */
-        transform: translateX(0%) !important;
-        transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1) !important;
-      }      
-      .cm-blockid{
-        color: #555555 !important;
-      }
-      .cm-line:hover .cm-blockid{
-        color: #999999 !important;
-        transform: translateX(-1000%) !important;        
+      /* 1. DEFINE THE COLOR SPECTRUM LOOP (NO MOVING PARTS) */
+      @keyframes idColorShift {
+          0% {
+              /* Starting point: Pure Red text */
+              color: hsl(0, 100%, 65%); 
+          }
+          25% {
+              /* Quarter-way point: Bright Orange/Yellow text */
+              color: hsl(90, 100%, 65%); 
+          }
+          50% {
+              /* Half-way point: Vibrant Cyan text */
+              color: hsl(180, 100%, 65%); 
+          }
+          75% {
+              /* Three-quarter point: Deep Purple text */
+              color: hsl(270, 100%, 65%); 
+          }
+          100% {
+              /* Full circle: Loops seamlessly back to Pure Red text */
+              color: hsl(360, 100%, 65%); 
+          }
       }
 
-      /* FIXED: Added !important inside keyframes timeline variables to cleanly override base themes */
+      /* 2. INITIAL BASE STATE (STATIONARY & LOW-CONTRAST) */
+      .cm-blockid {
+          position: absolute !important;
+          top: 0;
+          right: 0;
+          color: #333333; /* Dark charcoal grey when idle */
+      }
+
+      /* 3. HOVER OR FOCUS WITHIN STATE (FIRES THE COLOR SPECTRUM) */
+      .cm-line:hover .cm-blockid,
+      .cm-line.cm-active .cm-blockid {
+          color: #999999; /* Dark charcoal grey when idle */
+          /* Runs a fluid color shift loop indefinitely while your mouse or cursor stays on the line */
+          animation: idColorShift 4s linear infinite !important;
+      }
+
+      /* 1. THE BACKGROUND COLOR SPECTRUM LOOP (NO INVALID IMPORTANT FLAGS) */
+      @keyframes bgHueShift {
+          0% {
+              /* Starting point: Pure Red */
+              background-color: hsl(0, 100%, 50%); 
+          }
+          25% {
+              /* Quarter-way point: Vibrant Yellow-Green */
+              background-color: hsl(90, 100%, 50%); 
+          }
+          50% {
+              /* Half-way point: Cyan/Light Blue */
+              background-color: hsl(180, 100%, 50%); 
+          }
+          75% {
+              /* Three-quarter point: Deep Purple/Indigo */
+              background-color: hsl(270, 100%, 50%); 
+          }
+          100% {
+              /* Full circle: Loops smoothly back to Pure Red */
+              background-color: hsl(360, 100%, 50%); 
+          }
+      }
+
+
+      /* TARGET THE BULLET SYSTEM SPAN ONLY WHEN THE LINE HAS CURSOR FOCUS */
+      .cm-line:hover .list-bullet::after,
+      .cm-line.cm-active .list-bullet::after {
+          background-color: #007aff; /* Changes the bullet dot to neon blue */
+          transform: scale(1.5);                 /* Optional: makes the active bullet 20% larger */
+          animation: bgHueShift 5s linear infinite !important;
+      }
+
+
+/* =========================================================================
+   1. VALID HSL RAINBOW LOOP (NO INVALID IMPORTANT FLAGS)
+   ========================================================================= */
+@keyframes ultimateCursorRainbow {
+    0%   { background-color: hsl(0, 100%, 65%); }   /* Pure Red */
+    25%  { background-color: hsl(90, 100%, 65%); }  /* Yellow-Green */
+    50%  { background-color: hsl(180, 100%, 65%); } /* Vibrant Cyan */
+    75%  { background-color: hsl(270, 100%, 65%); } /* Electric Purple */
+    100% { background-color: hsl(360, 100%, 65%); } /* Loops back smoothly */
+}
+
+.cm-strong{
+  color: #aaaacc!important; /* Changes the text color (e.g., to orange) */
+  xanimation: idColorShift 20s linear infinite !important;
+}
+.cm-inline-code, code {
+  color: #ffffff; /* Changes the text color (e.g., to orange) */
+  xpadding: 2px 6px; /* Optional: adds space around the words */
+}
+
+
+/* FIXED: Added !important inside keyframes timeline variables to cleanly override base themes */
       @keyframes headersHueShiftRotate {
         0%   { filter: hue-rotate(0deg) !important; }
         50%  { filter: hue-rotate(180deg) !important; }
