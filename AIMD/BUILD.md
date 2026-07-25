@@ -18,7 +18,22 @@ and runtime execution.
 
 # BUILD
 
+<!-- TOC location -->
+## 🔍 Table of Contents
+<!-- Maintained by script -->
+- [BUILD](#a-build) <a id="toc-build"></a> ^toc-build
+  - [📑 AI Primary Files](#a-aiprimaryfiles) <a id="toc-aiprimaryfiles"></a> ^toc-aiprimaryfiles
+  - [📋 Prerequisites & Toolchain Setup](#a-prerequisitestoolchainsetup) <a id="toc-prerequisitestoolchainsetup"></a> ^toc-prerequisitestoolchainsetup
+  - [🛠️ Build & Packaging Pipeline](#a-buildpackagingpipeline) <a id="toc-buildpackagingpipeline"></a> ^toc-buildpackagingpipeline
+    - [📦 Key Components](#a-keycomponents) <a id="toc-keycomponents"></a> ^toc-keycomponents
+  - [🚀 Execution & Packing Commands](#a-executionpackingcommands) <a id="toc-executionpackingcommands"></a> ^toc-executionpackingcommands
+  - [🧪 Post-Build Verification Rules](#a-postbuildverificationrules) <a id="toc-postbuildverificationrules"></a> ^toc-postbuildverificationrules
+  - [🚀 Go to...](#a-goto) <a id="toc-goto"></a> ^toc-goto
+
+<a id="a-build"></a>[TOC](#toc-build)
+
 ## 📑 AI Primary Files
+<a id="a-aiprimaryfiles"></a>[TOC](#toc-aiprimaryfiles)
 
 - 🔹 [AGENTS.md](../AGENTS.md)
 - 🔹 [ARCHIVE.md](ARCHIVE.md)
@@ -37,13 +52,10 @@ and runtime execution.
 
 ---
 
-<!-- TOC location -->
-## 🔍 Table of Contents
-<!-- Maintained by script -->
-
 ---
 
 ## 📋 Prerequisites & Toolchain Setup
+<a id="a-prerequisitestoolchainsetup"></a>[TOC](#toc-prerequisitestoolchainsetup)
 
 - **Compiler/Runtime:** {{Specify runtime, e.g., Node.js v20.x, GCC v13.2, Aut2Exe v3.3+}}
 - **Global System Variables Required:**
@@ -58,6 +70,7 @@ Dependency Item List
 ---
 
 ## 🛠️ Build & Packaging Pipeline
+<a id="a-buildpackagingpipeline"></a>[TOC](#toc-buildpackagingpipeline)
 <!--
 Detail the high-level architecture of the build system.
 Mention variables compilation pathways, compiler tools, preprocessors, etc.
@@ -71,6 +84,7 @@ Pipeline Item List
 ---
 
 ### 📦 Key Components
+<a id="a-keycomponents"></a>[TOC](#toc-keycomponents)
 <!--
 Purpose of files/directory inside the compilation chain
 Dependencies, binary packages, or transpilers required for completion
@@ -83,6 +97,7 @@ Component Item List
 ---
 
 ## 🚀 Execution & Packing Commands
+<a id="a-executionpackingcommands"></a>[TOC](#toc-executionpackingcommands)
 <!--
 List the literal, usable CLI shell commands for restoring packages,
 launching development modes, linting files, and packaging production bundles.
@@ -102,6 +117,7 @@ List of Packing Steps
 ---
 
 ## 🧪 Post-Build Verification Rules
+<a id="a-postbuildverificationrules"></a>[TOC](#toc-postbuildverificationrules)
 <!--
 List the post-build checks and rules
 List of Verification Steps
@@ -116,6 +132,7 @@ List of Verification Steps
 ---
 
 ## 🚀 Go to...
+<a id="a-goto"></a>[TOC](#toc-goto)
 
 - 🔹 [AGENTS.md](../AGENTS.md)
 - 🔹 [ARCHIVE.md](ARCHIVE.md)

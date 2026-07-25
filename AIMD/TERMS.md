@@ -17,8 +17,20 @@ When generating code comments, documentation, or logs, always use these exact te
 
 # TERMS
 
+<!-- TOC location -->
+## 🔍 Table of Contents
+<!-- Maintained by script -->
+- [TERMS](#a-terms) <a id="toc-terms"></a> ^toc-terms
+  - [📑 AI Primary Files](#a-aiprimaryfiles) <a id="toc-aiprimaryfiles"></a> ^toc-aiprimaryfiles
+  - [🔤 Core Glossary A-Z](#a-coreglossaryaz) <a id="toc-coreglossaryaz"></a> ^toc-coreglossaryaz
+  - [🗂️ System Acronym Quick-Reference](#a-systemacronymquickreference) <a id="toc-systemacronymquickreference"></a> ^toc-systemacronymquickreference
+  - [🚀 Go to...](#a-goto) <a id="toc-goto"></a> ^toc-goto
+
+<a id="a-terms"></a>[TOC](#toc-terms)
+
 
 ## 📑 AI Primary Files
+<a id="a-aiprimaryfiles"></a>[TOC](#toc-aiprimaryfiles)
 
 - 🔹 [AGENTS.md](../AGENTS.md)
 - 🔹 [ARCHIVE.md](ARCHIVE.md)
@@ -35,18 +47,14 @@ When generating code comments, documentation, or logs, always use these exact te
 - 🔹 [TESTING.md](TESTING.md)
 - 🔹 [VERSIONS.md](VERSIONS.md)
 
-<!-- TOC location -->
-## 🔍 Table of Contents
-<!-- Maintained by script -->
-
 ---
 ## 🔤 Core Glossary A-Z
+<a id="a-coreglossaryaz"></a>[TOC](#toc-coreglossaryaz)
 <!--
 List of terms
 -->
 <!-- template: term
 ### {{Term / e.g., Junction Link}}
-<a id="a-termegjunctionlink"></a>[TOC](#toc-termegjunctionlink)
 - **Definition:** {{Detailed domain explanation or hardware/software abstraction mechanism definition}}
 - **Code Implementation Context:** {{Citing explicit hooks, scripts, or loops managing this element}}
 - **Synonyms / Avoid:** {{List phrases or naming alternatives to prohibit across comments and logs}}
@@ -55,6 +63,7 @@ List of terms
 ---
 
 ## 🗂️ System Acronym Quick-Reference
+<a id="a-systemacronymquickreference"></a>[TOC](#toc-systemacronymquickreference)
 
 <!-- template: reference table>
 | Acronym / Token | Full Expansion | Technical Scope |
@@ -67,6 +76,7 @@ List of terms
 ---
 
 ## 🚀 Go to...
+<a id="a-goto"></a>[TOC](#toc-goto)
 
 - 🔹 [AGENTS.md](../AGENTS.md)
 - 🔹 [ARCHIVE.md](ARCHIVE.md)

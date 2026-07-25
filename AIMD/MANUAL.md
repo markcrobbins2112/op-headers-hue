@@ -17,8 +17,27 @@ core algorithms, algebraic formulas, configuration guidelines, and technical spe
 
 # MANUAL
 
+<!-- TOC location -->
+## 🔍 Table of Contents
+<!-- Maintained by script -->
+- [MANUAL](#a-manual) <a id="toc-manual"></a> ^toc-manual
+  - [📑 AI Primary Files](#a-aiprimaryfiles) <a id="toc-aiprimaryfiles"></a> ^toc-aiprimaryfiles
+  - [📥 Installation & Initial Deployment](#a-installationinitialdeployment) <a id="toc-installationinitialdeployment"></a> ^toc-installationinitialdeployment
+    - [Setup Sequence](#a-setupsequence) <a id="toc-setupsequence"></a> ^toc-setupsequence
+  - [🏗️ 1. Architecture Overview](#a-1architectureoverview) <a id="toc-1architectureoverview"></a> ^toc-1architectureoverview
+  - [🧠 2. Core Modules & Systems](#a-2coremodulessystems) <a id="toc-2coremodulessystems"></a> ^toc-2coremodulessystems
+  - [🔎 3. Core Algorithm & Mathematical Formulas](#a-3corealgorithmmathematicalformulas) <a id="toc-3corealgorithmmathematicalformulas"></a> ^toc-3corealgorithmmathematicalformulas
+  - [🛰️ 4. Commands, Keybindings & Context Flags](#a-4commandskeybindingscontextflags) <a id="toc-4commandskeybindingscontextflags"></a> ^toc-4commandskeybindingscontextflags
+  - [🔧 5. Workspace Build & Configuration](#a-5workspacebuildconfiguration) <a id="toc-5workspacebuildconfiguration"></a> ^toc-5workspacebuildconfiguration
+  - [🔍 Diagnostics & Common Troubleshooting](#a-diagnosticscommontroubleshooting) <a id="toc-diagnosticscommontroubleshooting"></a> ^toc-diagnosticscommontroubleshooting
+    - [Known Failure States & Remediations](#a-knownfailurestatesremediations) <a id="toc-knownfailurestatesremediations"></a> ^toc-knownfailurestatesremediations
+  - [🚀 Go to...](#a-goto) <a id="toc-goto"></a> ^toc-goto
+
+<a id="a-manual"></a>[TOC](#toc-manual)
+
 
 ## 📑 AI Primary Files
+<a id="a-aiprimaryfiles"></a>[TOC](#toc-aiprimaryfiles)
 
 - 🔹 [AGENTS.md](../AGENTS.md)
 - 🔹 [ARCHIVE.md](ARCHIVE.md)
@@ -37,15 +56,13 @@ core algorithms, algebraic formulas, configuration guidelines, and technical spe
 
 ---
 
-<!-- TOC location -->
-## 🔍 Table of Contents
-<!-- Maintained by script -->
-
 ---
 
 ## 📥 Installation & Initial Deployment
+<a id="a-installationinitialdeployment"></a>[TOC](#toc-installationinitialdeployment)
 
 ### Setup Sequence
+<a id="a-setupsequence"></a>[TOC](#toc-setupsequence)
 
 - 1. **Compile/Build Assets:** Run the compile script or build pipeline as documented in [BUILD.md](BUILD.md).
 - 1. **Apply Configurations:** Run administrative scripts or system configurations required for the base application environment.
@@ -54,6 +71,7 @@ core algorithms, algebraic formulas, configuration guidelines, and technical spe
 ---
 
 ## 🏗️ 1. Architecture Overview
+<a id="a-1architectureoverview"></a>[TOC](#toc-1architectureoverview)
 <!--
 Outline the structural relationship of files and modules.
 Include raw ASCII boxes or diagrams to make the architecture immediately obvious.
@@ -91,6 +109,7 @@ graph TD
 ---
 
 ## 🧠 2. Core Modules & Systems
+<a id="a-2coremodulessystems"></a>[TOC](#toc-2coremodulessystems)
 <!--
 Document individual subsystems, class constructors, interfaces,   and persistent background loops that govern state transitions.
 List of Core Modules
@@ -102,6 +121,7 @@ List of Core Modules
 ---
 
 ## 🔎 3. Core Algorithm & Mathematical Formulas
+<a id="a-3corealgorithmmathematicalformulas"></a>[TOC](#toc-3corealgorithmmathematicalformulas)
 <!--
 Specify any underlying physical or software math calculations used.
 Represent equations cleanly in LaTeX format (e.g. $$ formula $$) with detailed variable legends.
@@ -115,6 +135,7 @@ List of formulas
 ---
 
 ## 🛰️ 4. Commands, Keybindings & Context Flags
+<a id="a-4commandskeybindingscontextflags"></a>[TOC](#toc-4commandskeybindingscontextflags)
 <!--
 Detail the operational command registry. This lists all binding combinations,  modifier mappings, context filters, and background triggering gates.
 List of actions
@@ -129,6 +150,7 @@ List of actions
 ---
 
 ## 🔧 5. Workspace Build & Configuration
+<a id="a-5workspacebuildconfiguration"></a>[TOC](#toc-5workspacebuildconfiguration)
 <!--
 Document configuration files format (.ini, .json, .env.example) and properties mapping. Highlight how to customize settings.
 List of configs
@@ -143,8 +165,10 @@ List of configs
 ---
 
 ## 🔍 Diagnostics & Common Troubleshooting
+<a id="a-diagnosticscommontroubleshooting"></a>[TOC](#toc-diagnosticscommontroubleshooting)
 
 ### Known Failure States & Remediations
+<a id="a-knownfailurestatesremediations"></a>[TOC](#toc-knownfailurestatesremediations)
 <!--
 List of Symptoms
 -->
@@ -157,6 +181,7 @@ List of Symptoms
 ---
 
 ## 🚀 Go to...
+<a id="a-goto"></a>[TOC](#toc-goto)
 
 - 🔹 [AGENTS.md](../AGENTS.md)
 - 🔹 [ARCHIVE.md](ARCHIVE.md)

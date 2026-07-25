@@ -18,11 +18,24 @@ then list them alphabetically under "All Features".
 
 # FEATURES
 
+<!-- TOC location -->
+## 🔍 Table of Contents
+<!-- Maintained by script -->
+- [FEATURES](#a-features) <a id="toc-features"></a> ^toc-features
+  - [📑 AI Primary Files](#a-aiprimaryfiles) <a id="toc-aiprimaryfiles"></a> ^toc-aiprimaryfiles
+  - [📦 Feature Groups](#a-featuregroups) <a id="toc-featuregroups"></a> ^toc-featuregroups
+  - [🗄️ All Features](#a-allfeatures) <a id="toc-allfeatures"></a> ^toc-allfeatures
+  - [📉 Deprecated / Removed Features](#a-deprecatedremovedfeatures) <a id="toc-deprecatedremovedfeatures"></a> ^toc-deprecatedremovedfeatures
+  - [🚀 Go to...](#a-goto) <a id="toc-goto"></a> ^toc-goto
+
+<a id="a-features"></a>[TOC](#toc-features)
+
 Welcome to {{Specify Program Name}}! {{Provide a 2-3 sentence overview of what the tool accomplishes and how it improves operational workflows}}.
 
 ---
 
 ## 📑 AI Primary Files
+<a id="a-aiprimaryfiles"></a>[TOC](#toc-aiprimaryfiles)
 
 - 🔹 [AGENTS.md](../AGENTS.md)
 - 🔹 [ARCHIVE.md](ARCHIVE.md)
@@ -41,13 +54,10 @@ Welcome to {{Specify Program Name}}! {{Provide a 2-3 sentence overview of what t
 
 ---
 
-<!-- TOC location -->
-## 🔍 Table of Contents
-<!-- Maintained by script -->
-
 ---
 
 ## 📦 Feature Groups
+<a id="a-featuregroups"></a>[TOC](#toc-featuregroups)
 
 <!-- template: feature group
 ### {{Icon}} 1. {{Group Title / e.g., Automated Layout Management}}
@@ -59,10 +69,10 @@ Welcome to {{Specify Program Name}}! {{Provide a 2-3 sentence overview of what t
 ---
 
 ## 🗄️ All Features
+<a id="a-allfeatures"></a>[TOC](#toc-allfeatures)
 
 <!-- template: feature
 ### {{Feature Title}}
-<a id="a-featuretitle"></a>[TOC](#toc-featuretitle)
 - **Group:** [{{Group Title}}](#z2)
 {{Technical feature operational overview walkthrough}}
 -->
@@ -70,6 +80,7 @@ Welcome to {{Specify Program Name}}! {{Provide a 2-3 sentence overview of what t
 ---
 
 ## 📉 Deprecated / Removed Features
+<a id="a-deprecatedremovedfeatures"></a>[TOC](#toc-deprecatedremovedfeatures)
 
 <!-- template: deprecated
 
@@ -79,6 +90,7 @@ Welcome to {{Specify Program Name}}! {{Provide a 2-3 sentence overview of what t
 
 ---
 ## 🚀 Go to...
+<a id="a-goto"></a>[TOC](#toc-goto)
 
 - 🔹 [AGENTS.md](../AGENTS.md)
 - 🔹 [ARCHIVE.md](ARCHIVE.md)

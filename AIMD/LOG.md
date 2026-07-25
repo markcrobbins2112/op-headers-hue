@@ -19,7 +19,20 @@ Keep the very latest entry at the top of the "Log Entries" section.
 
 # LOG
 
+<!-- TOC location -->
+## 🔍 Table of Contents
+<!-- Maintained by script -->
+- [LOG](#a-log) <a id="toc-log"></a> ^toc-log
+  - [📑 AI Primary Files](#a-aiprimaryfiles) <a id="toc-aiprimaryfiles"></a> ^toc-aiprimaryfiles
+  - [💾 Commit Message](#a-commitmessage) <a id="toc-commitmessage"></a> ^toc-commitmessage
+  - [📝 Log Entries](#a-logentries) <a id="toc-logentries"></a> ^toc-logentries
+  - [🏛️ Permanent Decision Record Archive](#a-permanentdecisionrecordarchive) <a id="toc-permanentdecisionrecordarchive"></a> ^toc-permanentdecisionrecordarchive
+  - [🚀 Go to...](#a-goto) <a id="toc-goto"></a> ^toc-goto
+
+<a id="a-log"></a>[TOC](#toc-log)
+
 ## 📑 AI Primary Files
+<a id="a-aiprimaryfiles"></a>[TOC](#toc-aiprimaryfiles)
 
 - 🔹 [AGENTS.md](../AGENTS.md)
 - 🔹 [ARCHIVE.md](ARCHIVE.md)
@@ -39,6 +52,7 @@ Keep the very latest entry at the top of the "Log Entries" section.
 ---
 
 ## 💾 Commit Message
+<a id="a-commitmessage"></a>[TOC](#toc-commitmessage)
 <!--
 Always maintain a clean, copyable commit message here summarizing the work from the active turn.
 This section must be emptied or updated as the user requests. Let the commit message strictly
@@ -55,14 +69,11 @@ follow Conventional Commits styling (e.g., feat:, fix:, chore:, docs:, refactor:
 
 ---
 
-<!-- TOC location -->
-## 🔍 Table of Contents
-<!-- Maintained by script -->
-
 ---
 
 
 ## 📝 Log Entries
+<a id="a-logentries"></a>[TOC](#toc-logentries)
 
 <!--
   INSTRUCTION FOR NEW ENTRIES:
@@ -92,6 +103,7 @@ follow Conventional Commits styling (e.g., feat:, fix:, chore:, docs:, refactor:
 ---
 
 ## 🏛️ Permanent Decision Record Archive
+<a id="a-permanentdecisionrecordarchive"></a>[TOC](#toc-permanentdecisionrecordarchive)
 
 <!-- A snapshot record of major architectural choices that must not be broken or forgotten in future chats.
 List of Architectural Decision Records
@@ -99,7 +111,6 @@ List of Architectural Decision Records
 
 <!-- template: Architectural Decision Record
 ### 🏷️ [ADR-001] - {{Architectural Decision Title / e.g., Choosing UTF-16 LE for System Configs}}
-<a id="a-adr001architecturaldecisiontitleegchoosingutf16leforsystemconfigs"></a>[TOC](#toc-adr001architecturaldecisiontitleegchoosingutf16leforsystemconfigs)
 - **Date Approved:** {{YYYY-MM-DD}}
 - **Context:** {{Why was this choice necessary? What constraints existed?}}
 - **Decision:** {{What exact path, pattern, library, or rule did you settle on?}}
@@ -110,6 +121,7 @@ List of Architectural Decision Records
 ---
 
 ## 🚀 Go to...
+<a id="a-goto"></a>[TOC](#toc-goto)
 
 - 🔹 [AGENTS.md](../AGENTS.md)
 - 🔹 [ARCHIVE.md](ARCHIVE.md)

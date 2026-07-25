@@ -17,7 +17,22 @@ ordering, and regions formatting. Every single code file must adhere strictly to
 
 # CODE
 
+<!-- TOC location -->
+## 🔍 Table of Contents
+<!-- Maintained by script -->
+- [CODE](#a-code) <a id="toc-code"></a> ^toc-code
+  - [📑 AI Primary Files](#a-aiprimaryfiles) <a id="toc-aiprimaryfiles"></a> ^toc-aiprimaryfiles
+  - [🛠️ Implementation Guidelines](#a-implementationguidelines) <a id="toc-implementationguidelines"></a> ^toc-implementationguidelines
+  - [📝 Markdown Guidelines](#a-markdownguidelines) <a id="toc-markdownguidelines"></a> ^toc-markdownguidelines
+  - [✒️ Formatting & Syntax Style](#a-formattingsyntaxstyle) <a id="toc-formattingsyntaxstyle"></a> ^toc-formattingsyntaxstyle
+  - [🛡️ Robustness & Error-Handling Frameworks](#a-robustnesserrorhandlingframeworks) <a id="toc-robustnesserrorhandlingframeworks"></a> ^toc-robustnesserrorhandlingframeworks
+  - [📂 Regions Division Style](#a-regionsdivisionstyle) <a id="toc-regionsdivisionstyle"></a> ^toc-regionsdivisionstyle
+  - [🚀 Go to](#a-goto) <a id="toc-goto"></a> ^toc-goto
+
+<a id="a-code"></a>[TOC](#toc-code)
+
 ## 📑 AI Primary Files
+<a id="a-aiprimaryfiles"></a>[TOC](#toc-aiprimaryfiles)
 
 - 🔹 [AGENTS.md](../AGENTS.md)
 - 🔹 [ARCHIVE.md](ARCHIVE.md)
@@ -36,13 +51,10 @@ ordering, and regions formatting. Every single code file must adhere strictly to
 
 ---
 
-<!-- TOC location -->
-## 🔍 Table of Contents
-<!-- Maintained by script -->
-
 ---
 
 ## 🛠️ Implementation Guidelines
+<a id="a-implementationguidelines"></a>[TOC](#toc-implementationguidelines)
 
 - **Encoding Safety**: Preserve UTF-8 signatures. Ensure icons, characters, emojis, and unicode symbols are written cleanly without corruption (mojibake).
 - **Target Changes Only**: Avoid complete file rewrites. Prefer minor, highly precise surgical patches to retain existing code blocks and comments intact.
@@ -50,6 +62,7 @@ ordering, and regions formatting. Every single code file must adhere strictly to
 ---
 
 ## 📝 Markdown Guidelines
+<a id="a-markdownguidelines"></a>[TOC](#toc-markdownguidelines)
 
 - Use dashes (`-`) instead of asterisks (`*`) for Bullet list items.
 - Maintain UPPERCASE.md documents cleanly with alphabetical features lists, updated logs, and checked backlogs.
@@ -134,6 +147,7 @@ ordering, and regions formatting. Every single code file must adhere strictly to
 ---
 
 ## ✒️ Formatting & Syntax Style
+<a id="a-formattingsyntaxstyle"></a>[TOC](#toc-formattingsyntaxstyle)
 
 - **Indentation**: {{Specify spacing preference [e.g., "Use tabs for indentation" or "Use 2 spaces"]}}
 - **Braces and Blocks**: {{Specify structural block guidelines [e.g., "Always use braces for control expressions, never inline single-line statements without brackets"]}}
@@ -143,6 +157,7 @@ ordering, and regions formatting. Every single code file must adhere strictly to
 ---
 
 ## 🛡️ Robustness & Error-Handling Frameworks
+<a id="a-robustnesserrorhandlingframeworks"></a>[TOC](#toc-robustnesserrorhandlingframeworks)
 
 - **Primary Paradigm:** {{Specify failure capturing, e.g., Structured Try/Catch blocks, return tuples, or local error code checking values}}
 - **Defensive Coding Checks:** Always validate that external dependencies, arguments, and file paths exist before performing destructive disk mutations.
@@ -152,6 +167,7 @@ ordering, and regions formatting. Every single code file must adhere strictly to
 ---
 
 ## 📂 Regions Division Style
+<a id="a-regionsdivisionstyle"></a>[TOC](#toc-regionsdivisionstyle)
 <!--
 Specify standard regions delimiters (#region / #endregion)
   and naming rules to group structures systematically.
@@ -172,6 +188,7 @@ Specify standard regions delimiters (#region / #endregion)
 ---
 
 ## 🚀 Go to
+<a id="a-goto"></a>[TOC](#toc-goto)
 
 - 🔹 [AGENTS.md](../AGENTS.md)
 - 🔹 [ARCHIVE.md](ARCHIVE.md)

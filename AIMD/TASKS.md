@@ -18,7 +18,31 @@ are received) and mark items completed ([x]) once verified.
 
 # TASKS
 
+<!-- TOC location -->
+## 🔍 Table of Contents
+<!-- Maintained by script -->
+- [TASKS](#a-tasks) <a id="toc-tasks"></a> ^toc-tasks
+  - [📑 AI Primary Files](#a-aiprimaryfiles) <a id="toc-aiprimaryfiles"></a> ^toc-aiprimaryfiles
+  - [🛑 Blocked Items & Impediments](#a-blockeditemsimpediments) <a id="toc-blockeditemsimpediments"></a> ^toc-blockeditemsimpediments
+  - [New](#a-new) <a id="toc-new"></a> ^toc-new
+    - [💬 Incoming tasks from chat](#a-incomingtasksfromchat) <a id="toc-incomingtasksfromchat"></a> ^toc-incomingtasksfromchat
+    - [🔄 New Changes](#a-newchanges) <a id="toc-newchanges"></a> ^toc-newchanges
+    - [⚙️ New Settings](#a-newsettings) <a id="toc-newsettings"></a> ^toc-newsettings
+    - [🕹️ New Commands](#a-newcommands) <a id="toc-newcommands"></a> ^toc-newcommands
+    - [⌨️ New Bindings](#a-newbindings) <a id="toc-newbindings"></a> ^toc-newbindings
+    - [🚀 New Features](#a-newfeatures) <a id="toc-newfeatures"></a> ^toc-newfeatures
+  - [Completed](#a-completed) <a id="toc-completed"></a> ^toc-completed
+    - [🗃️ Completed Backlog (Archive)](#a-completedbacklogarchive) <a id="toc-completedbacklogarchive"></a> ^toc-completedbacklogarchive
+    - [🛠️ Settings](#a-settings) <a id="toc-settings"></a> ^toc-settings
+    - [💻 Commands](#a-commands) <a id="toc-commands"></a> ^toc-commands
+    - [🔗 Bindings](#a-bindings) <a id="toc-bindings"></a> ^toc-bindings
+    - [📦 Features](#a-features) <a id="toc-features"></a> ^toc-features
+  - [🚀 Go to...](#a-goto) <a id="toc-goto"></a> ^toc-goto
+
+<a id="a-tasks"></a>[TOC](#toc-tasks)
+
 ## 📑 AI Primary Files
+<a id="a-aiprimaryfiles"></a>[TOC](#toc-aiprimaryfiles)
 
 - 🔹 [AGENTS.md](../AGENTS.md)
 - 🔹 [ARCHIVE.md](ARCHIVE.md)
@@ -35,13 +59,10 @@ are received) and mark items completed ([x]) once verified.
 - 🔹 [TESTING.md](TESTING.md)
 - 🔹 [VERSIONS.md](VERSIONS.md)
 
-<!-- TOC location -->
-## 🔍 Table of Contents
-<!-- Maintained by script -->
-
 ---
 
 ## 🛑 Blocked Items & Impediments
+<a id="a-blockeditemsimpediments"></a>[TOC](#toc-blockeditemsimpediments)
 <!--
 List of blocks
 -->
@@ -54,8 +75,10 @@ List of blocks
 ---
 
 ## New
+<a id="a-new"></a>[TOC](#toc-new)
 
 ### 💬 Incoming tasks from chat
+<a id="a-incomingtasksfromchat"></a>[TOC](#toc-incomingtasksfromchat)
 
 - [🗃️ Completed Backlog (Archive)](#a-completedbacklogarchive)
 
@@ -70,6 +93,7 @@ List of chat tasks
 ---
 
 ### 🔄 New Changes
+<a id="a-newchanges"></a>[TOC](#toc-newchanges)
 
 - [🗃️ Completed Backlog (Archive)](#a-completedbacklogarchive)
 
@@ -85,6 +109,7 @@ List of changes
  ---
 
 ### ⚙️ New Settings
+<a id="a-newsettings"></a>[TOC](#toc-newsettings)
 
 - [🛠️ Settings](#a-settings)
 
@@ -100,6 +125,7 @@ List of new settings
 ---
 
 ### 🕹️ New Commands
+<a id="a-newcommands"></a>[TOC](#toc-newcommands)
 
 - [💻 Commands](#a-commands)
 
@@ -115,6 +141,7 @@ List of new commands
 ---
 
 ### ⌨️ New Bindings
+<a id="a-newbindings"></a>[TOC](#toc-newbindings)
 
 - [🔗 Bindings](#a-bindings)
 
@@ -130,6 +157,7 @@ List of new bindings
 ---
 
 ### 🚀 New Features
+<a id="a-newfeatures"></a>[TOC](#toc-newfeatures)
 
 - [📦 Features](#a-features)
 
@@ -145,8 +173,10 @@ List of new features
 ---
 
 ## Completed
+<a id="a-completed"></a>[TOC](#toc-completed)
 
 ### 🗃️ Completed Backlog (Archive)
+<a id="a-completedbacklogarchive"></a>[TOC](#toc-completedbacklogarchive)
 
 - [💬 Incoming tasks from chat](#a-incomingtasksfromchat)
 - [🔄 New Changes](#a-newchanges)
@@ -162,6 +192,7 @@ List of completed
 ---
 
 ### 🛠️ Settings
+<a id="a-settings"></a>[TOC](#toc-settings)
 
 - [⚙️ New Settings](#a-newsettings)
 
@@ -176,6 +207,7 @@ List of settimgs
 ---
 
 ### 💻 Commands
+<a id="a-commands"></a>[TOC](#toc-commands)
 
 - [🕹️ New Commands](#a-newcommands)
 
@@ -189,6 +221,7 @@ List of commands
 ---
 
 ### 🔗 Bindings
+<a id="a-bindings"></a>[TOC](#toc-bindings)
 
 - [⌨️ New Bindings](#a-newbindings)
 
@@ -203,6 +236,7 @@ List of bindings
 ---
 
 ### 📦 Features
+<a id="a-features"></a>[TOC](#toc-features)
 
 - [🚀 New Features](#a-newfeatures)
 
@@ -217,6 +251,7 @@ List of feature
 ---
 
 ## 🚀 Go to...
+<a id="a-goto"></a>[TOC](#toc-goto)
 
 - 🔹 [AGENTS.md](../AGENTS.md)
 - 🔹 [ARCHIVE.md](ARCHIVE.md)
