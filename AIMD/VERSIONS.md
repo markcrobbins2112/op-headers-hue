@@ -2,15 +2,15 @@
 title: VERSIONS
 ---
 
-<!-- # TEMPLATE: VERSIONS.template.md -->
-<!-- 
-# VERSIONS
-# Any text bounded by double curly braces {{like this}} is a placeholder for you to fill out.
-# Replace those placeholders with semantic version history and deployment updates.
-#
-# INSTRUCTIONS FOR THE AI AGENT:
-# Use this document to trace the evolution of the software across versions. 
-# When deploying a new stable release or version milestone, document it at the TOP of this file using semantic versioning.
+<!-- TEMPLATE: VERSIONS.template.md -->
+<!--
+VERSIONS
+Any text bounded by double curly braces {{like this}} is a placeholder for you to fill out.
+Replace those placeholders with semantic version history and deployment updates.
+
+INSTRUCTIONS FOR THE AI AGENT:
+Use this document to trace the evolution of the software across versions.
+When deploying a new stable release or version milestone, document it at the TOP of this file using semantic versioning.
 -->
 
 <!-- markdownlint-disable MD013 -->
@@ -18,6 +18,7 @@ title: VERSIONS
 # VERSIONS
 
 ## 📑 AI Primary Files
+
 - 🔹 [AGENTS.md](../AGENTS.md)
 - 🔹 [ARCHIVE.md](ARCHIVE.md)
 - 🔹 [BUILD.md](BUILD.md)
@@ -33,42 +34,61 @@ title: VERSIONS
 - 🔹 [TESTING.md](TESTING.md)
 - 🔸 [VERSIONS.md](VERSIONS.md)
 
+---
+
+<!-- TOC location -->
 ## 🔍 Table of Contents
-- [[#🚀 Stable Releases & Milestones]] ^toc-stable
-- [[#🏗️ Pre-Release Iterations (Alpha/Beta Sandbox)]] ^toc-prerelease
-- [[#🚀 Go to...]] ^toc-goto
+<!-- Maintained by script -->
+
+---
 
 ## 🚀 Stable Releases & Milestones
-[[#^toc-stable|TOC]]
 
+<!-- template: release
 ### 🏷️ v1.1.0 ({{YYYY-MM-DD}}) - {{Release Update Name}}
+<a id="a-v110yyyymmddreleaseupdatename"></a>[TOC](#toc-v110yyyymmddreleaseupdatename)
+-->
+<!-- template: release added
 - **Added / Enhanced:**
-  - {{Specific Feature Description / e.g., Implemented native database compilation write loops}}
-  - {{Specific Feature Description / e.g., Integrated automatic runtime state change event signals}}
+  - {{details}}
+  - {{details}}
+ -->
+<!-- template: release fixed
 - **Fixed / Patched:**
-  - {{Issue Fix / e.g., Corrected an escape sequence failure inside configuration mapping array structures}}
-  - {{Issue Fix / e.g., Fixed a thread lock occurring when large environmental path matrices are evaluated}}
+  - {{details}}
+  - {{details}}
+ -->
+<!-- template: release breaking
 - **Breaking Changes & Remediations:**
-  - {{Describe any core structural dataset updates or directory footprint refactors introduced in this milestone.}}
-    - *Remediation:* {{Step-by-step notes explaining how the human operator updates running instances cleanly.}}
+  - {{details}}
+  - {{details}}
+ -->
 
+<!-- template: milestone
 ### 🏷️ v1.0.0 ({{YYYY-MM-DD}}) - {{Baseline Production Launch}}
+<a id="a-v100yyyymmddbaselineproductionlaunch"></a>[TOC](#toc-v100yyyymmddbaselineproductionlaunch)
 - **Summary:** {{Provide an abstract summary overview of the software product's baseline functional release milestone stability.}}
 - **Core Capabilities:**
   - {{High-level structural integrity checking parameters}}
   - {{Standard deployment and platform verification hooks configuration registry setup}}
+ -->
 
 ---
 
+<!-- template: prereleases
 ## 🏗️ Pre-Release Iterations (Alpha/Beta Sandbox)
-[[#^toc-prerelease|TOC]]
+<a id="a-prereleaseiterationsalphabetasandbox"></a>[TOC](#toc-prereleaseiterationsalphabetasandbox)
+ -->
 
+<!-- template: prerelease
 ### 🏷️ v0.1.0-beta ({{YYYY-MM-DD}})
+<a id="a-v010betayyyymmdd"></a>[TOC](#toc-v010betayyyymmdd)
 - **Milestone:** {{Initial developmental test build confirming environment communication matrix tracking frameworks are active.}}
+ -->
 
 ---
 ## 🚀 Go to...
-[[#^toc-goto|TOC]]
+<a id="a-goto"></a>[TOC](#toc-goto)
 - 🔹 [AGENTS.md](../AGENTS.md)
 - 🔹 [ARCHIVE.md](ARCHIVE.md)
 - 🔹 [BUILD.md](BUILD.md)
@@ -84,4 +104,4 @@ title: VERSIONS
 - 🔹 [TESTING.md](TESTING.md)
 - 🔸 [VERSIONS.md](VERSIONS.md)
 
-<!-- # TEMPLATE: VERSIONS.template.md -->
+<!-- TEMPLATE: VERSIONS.template.md -->

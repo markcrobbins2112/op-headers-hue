@@ -2,15 +2,15 @@
 title: AGENTS
 ---
 
-<!-- # TEMPLATE: AGENTS.template.md -->
-<!-- 
-# AGENTS
-# Any text bounded by double curly braces {{like this}} is a placeholder for you to fill out.
-# Replace those placeholders with real paths, rules, and project constraints.
-#
-# INSTRUCTIONS FOR THE AI AGENT:
-# This file defines your operational boundaries, tools, platforms, and roles.
-# Adhere strictly to the boundaries and prompts defined for your assigned persona.
+<!-- TEMPLATE: AGENTS.template.md -->
+<!--
+AGENTS
+Any text bounded by double curly braces {{like this}} is a placeholder for you to fill out.
+Replace those placeholders with real paths, rules, and project constraints.
+
+INSTRUCTIONS FOR THE AI AGENT:
+This file defines your operational boundaries, tools, platforms, and roles.
+Adhere strictly to the boundaries and prompts defined for your assigned persona.
 -->
 
 <!-- markdownlint-disable MD013 -->
@@ -33,118 +33,138 @@ title: AGENTS
 - 🔹 [TESTING.md](AIMD/TESTING.md)
 - 🔹 [VERSIONS.md](AIMD/VERSIONS.md)
 
-## 🔍 Table of Contents
-- [[#💻 Application]] ^toc-application
-- [[#⚙️ Platform]] ^toc-platform
-- [[#👥 Core Agent Roster & Personas]] ^toc-roster
-- [[#🛠️ Global Execution Rules & Governance]] ^toc-governance
-- [[#🚫 File Restrictions]] ^toc-restrictions
-- [[#📂 Project Context]] ^toc-context
-- [[#🚦 Interaction Rules & Handoff Protocols]] ^toc-protocols
-- [[#🏗️ Verification and Architecture Anchors]] ^toc-anchors
-- [[#📦 Build]] ^toc-build
-- [[#🎨 Code Styling and Preferences]] ^toc-styling
-- [[#🚀 Go to...]] ^toc-goto
+---
 
-<!-- 
-  INSTRUCTION: Specify the core objective / purpose of the application.
+<!-- TOC location -->
+## 🔍 Table of Contents
+<!-- Maintained by script -->
+
+---
+
+## 💻 Application
+<!--
+  Specify the core objective / purpose of the application.
   Provide a concise 1-2 sentence description of what system is being built.
 -->
-## 💻 Application
-[[#^toc-application|TOC]]
+<!-- template: application description
 - {{Describe the core application/extension being built here, e.g., "A background utility extension to streamline cross-platform environment handoffs and directory mapping workflows."}}
+-->
 
-<!-- 
-  INSTRUCTION: List the environment, target runner, code editors, OS, 
+---
+
+## ⚙️ Platform
+<!--
+  List the environment, target runner, code editors, OS,
   or platforms where this app compiles and executes.
 -->
-## ⚙️ Platform
-[[#^toc-platform|TOC]]
+<!-- template: platform description
 - {{Specify platforms, e.g., Windows 10, macOS, Cursor, VS Code, Node.js runtime environment, etc.}}
+-->
 
 ---
 
 ## 👥 Core Agent Roster & Personas
-[[#^toc-roster|TOC]]
-
-### 1. {{Agent Role Name / e.g., Lead Architect}}
-<!-- AI Purpose: Defines a specific AI persona, its strategic purpose, and operational mindset. -->
+<!-- persona list -->
+<!-- template: persona
+AI Purpose: Defines a specific AI persona, its strategic purpose, and operational mindset. ### 1. {{Agent Role Name / e.g., Lead Architect}}
 - **Persona Archetype:** {{e.g., Pragmatic, pedantic, security-focused expert code optimizer}}
 - **Core Responsibility:** {{e.g., Designing system topology, verifying schema migrations, structural layouts}}
 - **System Prompt / Identity:**
-  ```text
-  <!-- AI Format: Insert the exact system prompt block to copy/paste into your initialization context. -->
-  You are an expert... Your goal is to... Always prioritize...
-  ```
 
-### 2. {{Agent Role Name / e.g., Quality Assurance Bot}}
-- **Persona Archetype:** {{e.g., Edge-case hunter, test-driven development purist, validation engine}}
-- **Core Responsibility:** {{e.g., Writing integration tests, finding runtime edge cases, verifying errors}}
-- **System Prompt / Identity:**
-  ```text
-  You are an automated code auditor... Focus entirely on failure states...
-  ```
+#### role
+```text
+  You are an expert... Your goal is to... Always prioritize...
+```
+-->
 
 ---
 
 ## 🛠️ Global Execution Rules & Governance
-[[#^toc-governance|TOC]]
-
-<!-- 
-  INSTRUCTION: Document strict instructions regarding what the AI can and cannot modify.
-  This includes package.json rules, read-only third party vendor folders, etc.
+<!--
+Document strict instructions regarding what the AI can and cannot modify.
+This includes package.json rules, read-only third party vendor folders, etc.
 -->
+
+---
+
 ## 🚫 File Restrictions
-[[#^toc-restrictions|TOC]]
-- {{List any strict file edits rules, e.g., "Do not create new files unless requested", "Do not modify dependencies without human approval"}}
+<!--
+List any strict file edits rules, e.g., "Do not create new files unless requested", "Do not modify dependencies without human approval"
+-->
+
+---
 
 ### Do NOT alter Files
-- `!🌐index.md`
-- `!🏗️setup.md`
-- `.gitignore`
-- {{List other critical files, e.g., LICENSE, core infrastructure configuration templates, etc.}}
+<!--
+List
+-->
+
+---
 
 ### Inline Tasks
-- {{Specify inline system tasks parser format, e.g., "Comments in the form of `;! {instructions}` or `//! {instructions}` found in source code are active AI Tasks"}}
-
-<!-- 
-  INSTRUCTION: Detail the environment context (e.g., test fixtures, sandboxing, 
-  permissions, emulator settings, mock data rules).
+<!--
+List
+Specify inline system tasks parser format, e.g., "Comments in the form of `;! {instructions}` or `//! {instructions}` found in source code are active AI Tasks"
 -->
+
+---
+
 ## 📂 Project Context
-[[#^toc-context|TOC]]
-- {{Describe any local development directories or resources, e.g., "The standalone mock database file layout is configured for sandbox execution loops only."}}
+<!--
+List
+Detail the environment context (e.g., test fixtures, sandboxing, permissions, emulator settings, mock data rules).
+Describe any local development directories or resources, e.g., "The standalone mock database file layout is configured for sandbox execution loops only."
+-->
 
 ---
 
 ## 🚦 Interaction Rules & Handoff Protocols
-[[#^toc-protocols|TOC]]
 
 ### Multi-Agent Communication Style
-<!-- AI Purpose: Instructs the AI on how to pass tasks to other top-level signatures or ask for human validation. -->
-- **Handoff Phrase:** Use `[HANDOFF -> AgentName]` when a task shifts out of your core responsibility scope.
-- **Escalation Trigger:** Stop and request Human-in-the-Loop (`HITL`) confirmation if a proposed change disrupts primary system configurations, engine subkeys, or destructive file purges.
+<!-- AI Purpose: Instructs the AI on how to pass tasks to other top-level signatures or ask for human validation.
+List handoffs
+-->
+<!-- template: handoff
+#### {{handoff title}}
+- **Handoff Phrase:** {{info}}
+- **Escalation Trigger:**  {{info}}
+-->
 
 ---
 
 ## 🏗️ Verification and Architecture Anchors
-[[#^toc-anchors|TOC]]
+<!--
+List Anchors
+-->
+<!-- template: anchor
+#### {{handoff title}}
+List Anchor items
+-->
+<!-- template: anchor item
+- **{{anchor title}}:** {{info}}
+-->
 
-<!-- 
+---
+
+## 📦 Build
+<!--
   INSTRUCTION: List verification rules that MUST happen before complete cycles are closed.
   For example, running 'lint_applet' or 'compile_applet'.
 -->
-## 📦 Build
-[[#^toc-build|TOC]]
-- **Linter & Verification**: {{Provide check rules, e.g., "Always run compilation checks and execution verification routines before finishing your turn."}}
-
-## 🎨 Code Styling and Preferences
-[[#^toc-styling|TOC]]
-- See [CODE](AIMD/CODE.md)
+<!--
+List Build Stages
+-->
+<!-- template: build stage
+### {{build Stage Title}}
+Build Stage components list
+-->
+<!-- template: build stage component
+- **{{stage title}}:** {{info}}
+-->
 
 ---
 ## 🚀 Go to...
-[[#^toc-goto|TOC]]
+<a id="a-goto"></a>[TOC](#toc-goto)
 - 🔸 [AGENTS.md](AGENTS.md)
 - 🔹 [ARCHIVE.md](AIMD/ARCHIVE.md)
 - 🔹 [BUILD.md](AIMD/BUILD.md)
@@ -160,4 +180,4 @@ title: AGENTS
 - 🔹 [TESTING.md](AIMD/TESTING.md)
 - 🔹 [VERSIONS.md](AIMD/VERSIONS.md)
 
-<!-- # TEMPLATE: AGENTS.template.md -->
+<!-- TEMPLATE: AGENTS.template.md -->

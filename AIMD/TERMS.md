@@ -2,22 +2,24 @@
 title: TERMS
 ---
 
-<!-- # TEMPLATE: TERMS.template.md -->
-<!-- 
-# TERMS
-# Any text bounded by double curly braces {{like this}} is a placeholder for you to fill out.
-# Replace those placeholders with real project terms, definitions, and acronym boundaries.
-#
-# INSTRUCTIONS FOR THE AI AGENT:
-# Use this document to resolve semantic naming conventions, acronyms, and systemic definitions. 
-# When generating code comments, documentation, or logs, always use these exact terms to describe structural components.
+<!-- TEMPLATE: TERMS.template.md -->
+<!--
+TERMS
+Any text bounded by double curly braces {{like this}} is a placeholder for you to fill out.
+Replace those placeholders with real project terms, definitions, and acronym boundaries.
+
+INSTRUCTIONS FOR THE AI AGENT:
+Use this document to resolve semantic naming conventions, acronyms, and systemic definitions.
+When generating code comments, documentation, or logs, always use these exact terms to describe structural components.
 -->
 
 <!-- markdownlint-disable MD013 -->
 
 # TERMS
 
+
 ## 📑 AI Primary Files
+
 - 🔹 [AGENTS.md](../AGENTS.md)
 - 🔹 [ARCHIVE.md](ARCHIVE.md)
 - 🔹 [BUILD.md](BUILD.md)
@@ -33,37 +35,39 @@ title: TERMS
 - 🔹 [TESTING.md](TESTING.md)
 - 🔹 [VERSIONS.md](VERSIONS.md)
 
+<!-- TOC location -->
 ## 🔍 Table of Contents
-- [[#🔤 Core Glossary A-Z]] ^toc-glossary
-- [[#🗂️ System Acronym Quick-Reference]] ^toc-acronyms
-- [[#Go to...]] ^toc-goto
+<!-- Maintained by script -->
 
+---
 ## 🔤 Core Glossary A-Z
-[[#^toc-glossary|TOC]]
-
+<!--
+List of terms
+-->
+<!-- template: term
 ### {{Term / e.g., Junction Link}}
+<a id="a-termegjunctionlink"></a>[TOC](#toc-termegjunctionlink)
 - **Definition:** {{Detailed domain explanation or hardware/software abstraction mechanism definition}}
 - **Code Implementation Context:** {{Citing explicit hooks, scripts, or loops managing this element}}
 - **Synonyms / Avoid:** {{List phrases or naming alternatives to prohibit across comments and logs}}
-
-### {{Term / e.g., Parameter1}}
-- **Definition:** {{Details}}
-- **Code Implementation Context:** {{Details}}
+-->
 
 ---
 
 ## 🗂️ System Acronym Quick-Reference
-[[#^toc-acronyms|TOC]]
 
+<!-- template: reference table>
 | Acronym / Token | Full Expansion | Technical Scope |
 | :--- | :--- | :--- |
 | **`{{LE}}`** | {{Little Endian}} | {{The specific structural byte ordering required for parsing configurations.}} |
 | **`{{BOM}}`** | {{Byte Order Mark}} | {{The leading invisible system bytes used to verify configuration encoding compatibility.}} |
 | **`{{UDF}}`** | {{User Defined Function}} | {{External, reusable module script files imported into the core application loop engine.}} |
+-->
 
 ---
+
 ## 🚀 Go to...
-[[#^toc-goto|TOC]]
+
 - 🔹 [AGENTS.md](../AGENTS.md)
 - 🔹 [ARCHIVE.md](ARCHIVE.md)
 - 🔹 [BUILD.md](BUILD.md)
@@ -79,4 +83,4 @@ title: TERMS
 - 🔹 [TESTING.md](TESTING.md)
 - 🔹 [VERSIONS.md](VERSIONS.md)
 
-<!-- # TEMPLATE: TERMS.template.md -->
+<!-- TEMPLATE: TERMS.template.md -->

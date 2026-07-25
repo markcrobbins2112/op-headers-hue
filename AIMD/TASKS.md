@@ -2,16 +2,16 @@
 title: TASKS
 ---
 
-<!-- # TEMPLATE: TASKS.template.md -->
-<!-- 
-# TASKS
-# Any text bounded by double curly braces {{like this}} is a placeholder for you to fill out.
-# Replace those placeholders with real paths, rules, and project constraints.
-#
-# INSTRUCTIONS FOR THE AI AGENT:
-# This file tracks immediate development tasks and feature checklists.
-# Always update this backlog at the beginning of your turn (when new chat instructions 
-# are received) and mark items completed ([x]) once verified.
+<!-- TEMPLATE: TASKS.template.md -->
+<!--
+TASKS
+Any text bounded by double curly braces {{like this}} is a placeholder for you to fill out.
+Replace those placeholders with real paths, rules, and project constraints.
+
+INSTRUCTIONS FOR THE AI AGENT:
+This file tracks immediate development tasks and feature checklists.
+Always update this backlog at the beginning of your turn (when new chat instructions
+are received) and mark items completed ([x]) once verified.
 -->
 
 <!-- markdownlint-disable MD013 -->
@@ -19,6 +19,7 @@ title: TASKS
 # TASKS
 
 ## 📑 AI Primary Files
+
 - 🔹 [AGENTS.md](../AGENTS.md)
 - 🔹 [ARCHIVE.md](ARCHIVE.md)
 - 🔹 [BUILD.md](BUILD.md)
@@ -34,106 +35,189 @@ title: TASKS
 - 🔹 [TESTING.md](TESTING.md)
 - 🔹 [VERSIONS.md](VERSIONS.md)
 
+<!-- TOC location -->
 ## 🔍 Table of Contents
-## 🔍 Table of Contents
-- [[#💬 Incoming tasks from chat]] ^toc-chat
-- [[#🔄 New Changes]] ^toc-changes
-- [[#⚙️ New Settings]] ^toc-new-settings
-- [[#🕹️ New Commands]] ^toc-new-commands
-- [[#⌨️ New Bindings]] ^toc-new-bindings
-- [[#🚀 New Features]] ^toc-new-features
-- [[#🛑 Blocked Items & Impediments]] ^toc-blocked
-- [[#🗃️ Completed Backlog (Archive)]] ^toc-backlog
-- [[#🛠️ Settings]] ^toc-arch-settings
-- [[#💻 Commands]] ^toc-arch-commands
-- [[#🔗 Bindings]] ^toc-arch-bindings
-- [[#📦 Features]] ^toc-arch-features
-- [[#🚀 Go to...]] ^toc-goto
-
-<!-- 
-  INSTRUCTION: Detail direct feature and workflow requests from the user's chat stream.
-  State tasks explicitly and breakdown complex tasks into sub-bullets.
--->
-## 💬 Incoming tasks from chat
-[[#^toc-chat|TOC]]
-- [ ] {{Immediate chat task title 1}}
-  - {{Sub-details or acceptance criteria string}}
-- [ ] {{Immediate chat task title 2}}
-
-<!-- 
-  INSTRUCTION: Checklists of ongoing file structural, layout, or backend changes.
--->
-## 🔄 New Changes
-[[#^toc-changes|TOC]]
-- [ ] Change {{Source}} to {{Target}}
-  - {{Describe what is being reorganized or cleaned up in the files}}
-
-<!-- 
-  INSTRUCTION: Specify any new application configurations, environment overrides, 
-  or system values in local settings containers (.json, .ini, .env).
--->
-## ⚙️ New Settings
-[[#^toc-new-settings|TOC]]
-- [ ] {{Setting Key or Property Name}}
-  - {{Value format and explanation of how it affects runtime states}}
-
-<!-- 
-  INSTRUCTION: Tasks mapping to newly registered commands (e.g., VS Code commands, AHK actions).
--->
-## 🕹️ New Commands
-[[#^toc-new-commands|TOC]]
-- [ ] Command: `{{Command ID / Name}}`
-  - {{Key callback and functionality definition}}
-
-<!-- 
-  INSTRUCTION: Tasks mapping to newly configured keystroke hotkeys or shortcuts.
--->
-## ⌨️ New Bindings
-[[#^toc-new-bindings|TOC]]
-- [ ] Binding: `{{Keys Combination, e.g. Ctrl+Shift+S}}`
-  - {{Callback command or action triggering mapping}}
-
-<!-- 
-  INSTRUCTION: Checklists of newly requested major feature modules.
--->
-## 🚀 New Features
-[[#^toc-new-features|TOC]]
-- [ ] Feature Name: {{Feature Description}}
-  - {{User-facing outcome and core sub-modules list}}
+<!-- Maintained by script -->
 
 ---
 
 ## 🛑 Blocked Items & Impediments
-[[#^toc-blocked|TOC]]
+<!--
+List of blocks
+-->
+<!-- template: block
 - **Blocked Task:** {{TASK-00X}}
   - **Reason for Block:** {{Describe the specific error, missing file, or ambiguity}}
   - **Action Required From:** `[Human]` or `{{Agent Name}}`
+-->
 
 ---
 
-## 🗃️ Completed Backlog (Archive)
-[[#^toc-backlog|TOC]]
-- [x] **{{TASK-000}} - Baseline Environment Layout Initialization** (By {{AgentName}} on {{2026-06-23}})
+## New
+
+### 💬 Incoming tasks from chat
+
+- [🗃️ Completed Backlog (Archive)](#a-completedbacklogarchive)
+
+<!--
+List of chat tasks
+-->
+<!-- template: chat task
+- [x] {{Goal}}
+  - {{sub goal, issues}}
+-->
+
+---
+
+### 🔄 New Changes
+
+- [🗃️ Completed Backlog (Archive)](#a-completedbacklogarchive)
+
+<!--
+Checklists of ongoing file structural, layout, or backend changes.
+List of changes
+-->
+<!-- template: change
+- [ ] Change {{Source}} to {{Target}}
+  - {{Describe what is being reorganized or cleaned up in the files}}
+-->
+
+ ---
+
+### ⚙️ New Settings
+
+- [🛠️ Settings](#a-settings)
+
+<!--
+Specify any new application configurations, environment overrides,  or system values in local settings containers (.json, .ini, .env).
+List of new settings
+-->
+<!-- template: new setting
+- [ ] {{Setting Key or Property Name}}
+  - {{Value format and explanation of how it affects runtime states}}
+-->
+
+---
+
+### 🕹️ New Commands
+
+- [💻 Commands](#a-commands)
+
+<!--
+Tasks mapping to newly registered commands (e.g., VS Code commands, AHK actions).
+List of new commands
+-->
+<!-- template: new command
+- [ ] Command: `{{Command ID / Name}}`
+  - {{Key callback and functionality definition}}
+-->
+
+---
+
+### ⌨️ New Bindings
+
+- [🔗 Bindings](#a-bindings)
+
+<!--
+Tasks mapping to newly configured keystroke hotkeys or shortcuts.
+List of new bindings
+-->
+<!-- template: new binding
+- [ ] Binding: `{{Keys Combination, e.g. Ctrl+Shift+S}}`
+  - {{Callback command or action triggering mapping}}
+-->
+
+---
+
+### 🚀 New Features
+
+- [📦 Features](#a-features)
+
+<!--
+Checklists of newly requested major feature modules.
+List of new features
+-->
+<!-- template: new feature
+- [ ] Feature Name: {{Feature Description}}
+  - {{User-facing outcome and core sub-modules list}}
+-->
+
+---
+
+## Completed
+
+### 🗃️ Completed Backlog (Archive)
+
+- [💬 Incoming tasks from chat](#a-incomingtasksfromchat)
+- [🔄 New Changes](#a-newchanges)
+
+<!--
+Completed tasks
+List of completed
+-->
+<!-- template: completed
+- [x] **TASK-001:** {{description}} (By {{who}})
+-->
+
+---
 
 ### 🛠️ Settings
-[[#^toc-arch-settings|TOC]]
+
+- [⚙️ New Settings](#a-newsettings)
+
+<!--
+Completed Settings
+List of settimgs
+-->
+<!-- template: setting
 - [ ] {{Configured/Established settings reference metadata}}
-
-### 💻 Commands
-[[#^toc-arch-commands|TOC]]
-- [ ] {{Configured/Established commands reference metadata}}
-
-### 🔗 Bindings
-[[#^toc-arch-bindings|TOC]]
-- [ ] {{Configured/Established hotkeys reference metadata}}
-
-### 📦 Features
-[[#^toc-arch-features|TOC]]
-- [ ] {{Configured/Established user-facing features reference metadata}}
+-->
 
 ---
+
+### 💻 Commands
+
+- [🕹️ New Commands](#a-newcommands)
+
+<!--
+Completed Commands
+List of commands
+-->
+<!-- template: command
+- [ ] {{Configured/Established commands reference metadata}}
+-->
+---
+
+### 🔗 Bindings
+
+- [⌨️ New Bindings](#a-newbindings)
+
+<!--
+Completed Bindings
+List of bindings
+-->
+<!-- template: binding
+- [ ] {{Configured/Established hotkeys reference metadata}}
+-->
+
+---
+
+### 📦 Features
+
+- [🚀 New Features](#a-newfeatures)
+
+<!--
+Completed Features
+List of feature
+-->
+<!-- template: feature
+- [ ] {{Configured/Established user-facing features reference metadata}}
+-->
+
+---
+
 ## 🚀 Go to...
-[[#^toc-goto|TOC]]
+
 - 🔹 [AGENTS.md](../AGENTS.md)
 - 🔹 [ARCHIVE.md](ARCHIVE.md)
 - 🔹 [BUILD.md](BUILD.md)
@@ -149,4 +233,4 @@ title: TASKS
 - 🔹 [TESTING.md](TESTING.md)
 - 🔹 [VERSIONS.md](VERSIONS.md)
 
-<!-- # TEMPLATE: TASKS.template.md -->
+<!-- TEMPLATE: TASKS.template.md -->
