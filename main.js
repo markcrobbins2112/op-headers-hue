@@ -6,7 +6,7 @@ module.exports = class HeadersHuePlugin extends Plugin {
     this.observer = null;
     this.activeAnimations = new Set();
   }
-  
+
   async onload() {
     console.log('%c[Headers Hue]%c Initializing Custom Header Theme Engine...', 'color: #70a1ff; font-weight: bold;', 'color: default;');
 
@@ -41,7 +41,7 @@ module.exports = class HeadersHuePlugin extends Plugin {
       mutations.forEach((mutation) => {
         if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
           const target = mutation.target;
-          
+
           const isFoldTrigger = target.matches('.cm-fold-indicator, .cm-gutterElement, .markdown-heading-collapse-button');
           if (isFoldTrigger) {
             // Expanded search matrix to capture any surrounding header lines or preview nodes seamlessly
@@ -63,7 +63,7 @@ module.exports = class HeadersHuePlugin extends Plugin {
     const activeHeaders = document.querySelectorAll(
       '.cm-header, h1, h2, h3, h4, h5, h6, .markdown-preview-view h1, .markdown-preview-view h2, .markdown-preview-view h3, .markdown-preview-view h4, .markdown-preview-view h5, .markdown-preview-view h6'
     );
-    
+
     activeHeaders.forEach((header) => {
       this.assignHeaderIdentifierTraits(header);
     });
@@ -73,7 +73,7 @@ module.exports = class HeadersHuePlugin extends Plugin {
     const headings = previewElement.querySelectorAll('h1, h2, h3, h4, h5, h6');
     headings.forEach((heading) => {
       this.assignHeaderIdentifierTraits(heading);
-      
+
       const collapseBtn = heading.querySelector('.markdown-heading-collapse-button');
       if (collapseBtn && !collapseBtn.dataset.hueBound) {
         collapseBtn.dataset.hueBound = "true";
@@ -113,7 +113,7 @@ module.exports = class HeadersHuePlugin extends Plugin {
     if (containerElement.hasAttribute('data-hue-level') || containerElement.matches('[class*="cm-header-"], .cm-header')) {
       targets.push(containerElement);
     }
-    
+
     const children = containerElement.querySelectorAll('[data-hue-level], [class*="cm-header-"], .cm-header');
     children.forEach(el => targets.push(el));
 
@@ -149,7 +149,7 @@ module.exports = class HeadersHuePlugin extends Plugin {
       /* Normal body text color */
       body {
         color:  #777799 !important;
-      }        
+      }
       .headers-hue-processed,
       .cm-s-obsidian .cm-header {
         transition: color 0.3s ease, border-image 0.3s ease !important;
@@ -171,21 +171,22 @@ module.exports = class HeadersHuePlugin extends Plugin {
 
     Object.keys(levelsMap).forEach((lvl) => {
       const colors = levelsMap[lvl];
-      
+
+
       cssRules += `
-        [data-hue-level="${lvl}"]:not(.cm-formatting-header),
-        .cm-s-obsidian .cm-header-${lvl}:not(.cm-formatting-header) {
-          display: inline-block !important;
-          min-width: 60% !important;
+	    [data-hue-level="${lvl}"]:not(.cm-formatting-header),
+        .HyperMD-header.HyperMD-header-${lvl}.cm-line {
+          xdisplay: inline-block !important;
+          xmin-width: 60% !important;
           color: ${colors.rest} !important;
           border-bottom: 2px solid transparent !important;
           border-image: linear-gradient(to right, ${colors.rest}, transparent) 1 !important;
           text-decoration: none !important;
         }
 
-        .cm-active .cm-header-${lvl}:not(.cm-formatting-header),
-        [data-hue-level="${lvl}"]:not(.cm-formatting-header):hover,
-        .cm-s-obsidian .cm-header-${lvl}:not(.cm-formatting-header):hover {
+		[data-hue-level="${lvl}"]:not(.cm-formatting-header):hover,
+        .HyperMD-header.HyperMD-header-${lvl}.cm-line.cm-active,
+        .HyperMD-header.HyperMD-header-${lvl}.cm-line:hover {
           color: ${colors.hover} !important;
           border-image: linear-gradient(to right, ${colors.hover}, transparent) 1 !important;
         }
@@ -242,23 +243,23 @@ module.exports = class HeadersHuePlugin extends Plugin {
       @keyframes idColorShift {
           0% {
               /* Starting point: Pure Red text */
-              color: hsl(0, 100%, 65%); 
+              color: hsl(0, 100%, 65%);
           }
           25% {
               /* Quarter-way point: Bright Orange/Yellow text */
-              color: hsl(90, 100%, 65%); 
+              color: hsl(90, 100%, 65%);
           }
           50% {
               /* Half-way point: Vibrant Cyan text */
-              color: hsl(180, 100%, 65%); 
+              color: hsl(180, 100%, 65%);
           }
           75% {
               /* Three-quarter point: Deep Purple text */
-              color: hsl(270, 100%, 65%); 
+              color: hsl(270, 100%, 65%);
           }
           100% {
               /* Full circle: Loops seamlessly back to Pure Red text */
-              color: hsl(360, 100%, 65%); 
+              color: hsl(360, 100%, 65%);
           }
       }
 
@@ -282,23 +283,23 @@ module.exports = class HeadersHuePlugin extends Plugin {
       @keyframes bgHueShift {
           0% {
               /* Starting point: Pure Red */
-              background-color: hsl(0, 100%, 50%); 
+              background-color: hsl(0, 100%, 50%);
           }
           25% {
               /* Quarter-way point: Vibrant Yellow-Green */
-              background-color: hsl(90, 100%, 50%); 
+              background-color: hsl(90, 100%, 50%);
           }
           50% {
               /* Half-way point: Cyan/Light Blue */
-              background-color: hsl(180, 100%, 50%); 
+              background-color: hsl(180, 100%, 50%);
           }
           75% {
               /* Three-quarter point: Deep Purple/Indigo */
-              background-color: hsl(270, 100%, 50%); 
+              background-color: hsl(270, 100%, 50%);
           }
           100% {
               /* Full circle: Loops smoothly back to Pure Red */
-              background-color: hsl(360, 100%, 50%); 
+              background-color: hsl(360, 100%, 50%);
           }
       }
 
